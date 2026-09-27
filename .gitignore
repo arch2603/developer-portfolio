@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+.vs/
+.vscode/
+frontend/.env*
+**/appsettings.Development.json
+*.env
+*.pem
+*.ppk
+release/
+*.zip
