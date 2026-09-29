@@ -26,7 +26,9 @@ export function AboutPage() {
 
             <p>{about.introduction}</p>
 
-            <p>{about.biography.split('\n\n').map((paragraph, index) => <p key={index}>{paragraph}</p>)}</p>
+            {about.biography.split(/\r?\n\r?\n/).map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+            ))}
 
             <p>
                 <strong>Location:</strong> {about.location}
