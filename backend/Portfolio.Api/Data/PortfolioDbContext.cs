@@ -9,6 +9,8 @@ public sealed class PortfolioDbContext(DbContextOptions<PortfolioDbContext> opti
     public DbSet<Technology> Technologies => Set<Technology>();
     public DbSet<ProjectTechnology> ProjectTechnologies => Set<ProjectTechnology>();
     public DbSet<ContactMessage> ContactMessages => Set<ContactMessage>();
+    public DbSet<AboutProfile> AboutProfiles => Set<AboutProfile>();
+    public DbSet<AboutCapability> AboutCapabilities => Set<AboutCapability>();
     protected override void OnModelCreating(ModelBuilder modelBuilder) =>
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(PortfolioDbContext).Assembly);
 }

@@ -12,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddProblemDetails();
 builder.Services.AddHealthChecks();
 builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddDbContext<PortfolioDbContext>(o => o.UseNpgsql(connection));
 builder.Services.Configure<ForwardedHeadersOptions>(o =>
 {
