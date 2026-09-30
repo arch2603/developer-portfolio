@@ -300,8 +300,8 @@ button:focus-visible {
     }
 
     .about-story {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: inmax(180px, 0.7fr) minmax(0, 2fr);
+        gap: 4rem;
     }
 
     .about-strengths {
