@@ -249,6 +249,7 @@ button:focus-visible {
     margin-bottom: 1.4rem;
     line-height: 1.8;
     opacity: 0.88;
+    max-width: 720px;
 }
 
 .capability-grid {
