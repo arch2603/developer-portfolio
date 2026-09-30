@@ -24,8 +24,8 @@ export function AboutPage() {
         <article>
             <section className="about-hero">
                 <p className="about-eyebrow">About me</p>
-                <p>{about.introduction}</p>
                 <h1>{about.heading}</h1>
+                <p>{about.introduction}</p>
                 <div className="about-meta">
                     <span>Location: {about.location}</span>
                     <span className="about-availability">Availability: {about.availability}</span>
