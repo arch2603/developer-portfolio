@@ -169,7 +169,7 @@ button:focus-visible {
     flex-direction: column;
     gap: 4rem;
     padding-block: 3rem 5rem;
-  
+
 }
 
 .about-hero {
@@ -300,8 +300,8 @@ button:focus-visible {
     }
 
     .about-story {
-        grid-template-columns: inmax(180px, 0.7fr) minmax(0, 2fr);
-        gap: 4rem;
+        grid-template-columns: minmax(250px, 0.8fr) minmax(0, 2fr);
+        gap: 3.5rem;
     }
 
     .about-strengths {
