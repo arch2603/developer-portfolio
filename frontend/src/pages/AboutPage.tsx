@@ -19,32 +19,80 @@ export function AboutPage() {
     if (!about) {
         return <p>Loading...</p>;
     }
-
+    const biographyParagraphs = about.biography.split(/\r?\n\r?\n/);
     return (
         <article>
-            <h1>{about.heading}</h1>
+            <section className="about-hero">
+                <p className="about-eyebrow">About me</p>
+                <p>{about.introduction}</p>
+                <h1>{about.heading}</h1>
+                <div className="about-meta">
+                    <span>Location: {about.location}</span>
+                    <span className="about-availability">Availability: {about.availability}</span>
+                </div>
+            </section>
 
-            <p>{about.introduction}</p>
+            <section className="about-section about-story">
+                <div className="about-section-heading">
+                    <p className="about-eyebrow">Background</p>
+                    <h2>My Professional Journey</h2>
+                </div>
 
-            {about.biography.split(/\r?\n\r?\n/).map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-            ))}
+                <div className="about-biography">
+                    {biographyParagraphs.map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                    ))}
+                </div>
+            </section>
 
-            <p>
-                <strong>Location:</strong> {about.location}
-            </p>
+            <section className="about-section">
+                <div className="about-section-heading">
+                    <p className="about-eyebrow">Technology</p>
+                    <h2>Technical capabilities</h2>
+                </div>
 
-            <p>
-                <strong>Availability:</strong> {about.availability}
-            </p>
+                <div className="capability-grid">
+                    {about.capabilities.map((capability) => (
+                        <span className="capability-badge" key={capability}>
+                            {capability}
+                        </span>
+                    ))}
+                </div>
+            </section>
 
-            <h2>Capabilities</h2>
+            <section className="about-section">
+                <div className="about-section-heading">
+                    <p className="about-eyebrow">Experience</p>
+                    <h2>What I bring</h2>
+                </div>
 
-            <ul>
-                {about.capabilities.map((capability) => (
-                    <li key={capability}>{capability}</li>
-                ))}
-            </ul>
+                <div className="about-strengths">
+                    <div className="about-strength-card">
+                        <h3>Full-stack development</h3>
+                        <p>
+                            Building frontend experiences, backend services,
+                            REST APIs and relational database solutions.
+                        </p>
+                    </div>
+
+                    <div className="about-strength-card">
+                        <h3>Cloud & deployment</h3>
+                        <p>
+                            Deploying and supporting applications using AWS,
+                            Linux, Nginx, Docker and CI/CD practices.
+                        </p>
+                    </div>
+
+                    <div className="about-strength-card">
+                        <h3>Systems experience</h3>
+                        <p>
+                            Combining software development with systems
+                            analysis, troubleshooting, databases and
+                            production support.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </article>
     );
 }
