@@ -5,4 +5,5 @@ public sealed class Technology
     public required string Name { get; set; }
     public required string Slug { get; set; }
     public ICollection<ProjectTechnology> ProjectTechnologies { get; set; } = [];
+    public ICollection<ExperienceTechnology> ExperienceTechnologies { get; set; } = [];
 }
