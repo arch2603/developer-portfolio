@@ -367,13 +367,27 @@ button:focus-visible {
         max-width: none;
     }
 
+    .about-biography,
+    .about-biography p {
+        max-width: none;
+        width: 100%;
+    }
+
     .about-biography p {
         width: 100%;
         max-width: none;
         margin-bottom: 1.25rem;
-        line-height: 1.7;
+        line-height: 1.65;
         overflow-wrap: break-word;
         hyphens: auto;
+    }
+
+    .about-meta {
+        align-items: flex-start;
+    }
+
+    .about-meta span {
+        max-width: 100%;
     }
 
     .capability-grid {
@@ -390,7 +404,7 @@ button:focus-visible {
         grid-template-columns: 1fr;
     }
 
-        nav {
+    nav {
         align-items: flex-start;
         flex-direction: column;
         padding-block: 0.9rem;
@@ -400,6 +414,39 @@ button:focus-visible {
     .nav-links {
         width: 100%;
         gap: 0.65rem 1rem;
+    }
+
+    .experience-page {
+        gap: 2rem;
+    }
+
+    .experience-hero {
+        padding-block: 1rem;
+    }
+
+    .experience-card {
+        padding: 1.15rem;
+    }
+
+    .experience-card-header {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .experience-date {
+        white-space: normal;
+    }
+
+    .experience-summary {
+        line-height: 1.65;
+    }
+
+    .experience-highlights {
+        padding-left: 1.1rem;
+    }
+
+    .experience-technologies {
+        gap: 0.5rem;
     }
 }
 
